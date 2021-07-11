@@ -26,7 +26,7 @@ $adresse = $_POST['adresse'];
 $size = $_POST['size'];
 $quantity = $_POST['product-quantity'] ;
 $somme = $_POST['product-quantity'] * 49.99 + 7 ;
-$email = "Wasim.dieb@gmail.com";
+$email = "mohamedali.benchikha@esprit.tn";
 $subject ="Command For Dictators tshirt v1";
 $body= "name : ".$name."\n email : ".$Email."\n tel : ".$tel."\n adresse : ".$adresse."\n size : ".$size."\n quantity : ".$quantity."\n Total : ".$somme." dt" ;
 
@@ -34,7 +34,7 @@ $body= "name : ".$name."\n email : ".$Email."\n tel : ".$tel."\n adresse : ".$ad
 
 $mail->isHTML(true);
 $mail->setFrom($email);
-$mail->addAddress("Wasim.dieb@gmail.com");
+$mail->addAddress("mohamedali.benchikha@esprit.tn");
 $mail->Subject = $subject;
 $mail->Body = $body;
 
