@@ -43,6 +43,7 @@ form.addEventListener("submit", (e) => {
   const subject = `${data.get("name")}`;
   const fruits = [data.get("apple"), data.get("orange")].filter(fruit => fruit !== null);
   const body = `name ${data.get("name")} email ${data.get("email")} tel ${data.get("tel")} adresse ${data.get("adresse")} size ${data.get("size")} quantity ${data.get("product-quantity")}.`;
+ 	sendEmail(body); 
   function sendEmail(body)
 	  {
 		Email.send({
@@ -170,7 +171,7 @@ form.addEventListener("submit", (e) => {
 							<input type="text" value="0" name="product-quantity" id="product-quantit"  required>
 						</div>
 					</div>
-										<!--<button onclick="send()" class="btn btn-main mt-20">Buy</button>-->
+					<!--<button onclick="send()" class="btn btn-main mt-20">Buy</button>-->
 					<input type="submit" class="btn btn-main mt-20" placeholder="Buy Now" value="submit>
 					
 				</div>
