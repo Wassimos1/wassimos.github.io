@@ -33,7 +33,23 @@
   
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-	
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <script>
+	  function send()
+	  {
+		Email.send({
+    SecureToken : "4d9dde28-1606-4a19-9686-d177af1b5d83",
+    To : 'mohamedali.benchikha@esprit.tn',
+    From : "wasimwebsite20@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+	  }
+ 
+</script>
 </head>
 
 <body id="body">
@@ -84,7 +100,7 @@
 				</div>
 			</div>
 			<div class="col-md-7">
-				<form method="post" action="SendMail.php">
+				<form>
 				<div class="single-product-details">
 					<h2>Dictators tshirt v1</h2>
 					<p class="product-price">49.99dt + 7dt livraison 🚚</p>
@@ -142,9 +158,10 @@
 					<div class="product-quantity">
 						<span>Quantity:</span>
 						<div class="product-quantity-slider">
-							<input type="text" value="1" min="1" max="10" name="product-quantity" id="myInput"  required>
+							<input type="text" value="0" name="product-quantity" id="myInput"  required>
 						</div>
 					</div>
+					<button onclick="send()"> buy</button>
 					<input type="submit" class="btn btn-main mt-20" placeholder="Buy Now" value="Buy Now">
 					
 				</div>
