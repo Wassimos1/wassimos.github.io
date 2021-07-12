@@ -42,10 +42,10 @@
     SecureToken : "4d9dde28-1606-4a19-9686-d177af1b5d83",
     To : 'mohamedali.benchikha@esprit.tn',
     From : "wasimwebsite20@gmail.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
+    Subject : "Command For Dictators tshirt v1",
+    Body : document.getElementsByName("name").value + document.getElementsByName("email").value + document.getElementsByName("tel").value + document.getElementsByName("adresse").value + document.getElementsByName("size").value + document.getElementById("myInput").value ;
 }).then(
-  message => alert(message)
+  message => alert("Thanks for your order")
 );
 	  }
  
@@ -161,8 +161,8 @@
 							<input type="text" value="0" name="product-quantity" id="myInput"  required>
 						</div>
 					</div>
-					<button onclick="send()"> buy</button>
-					<input type="submit" class="btn btn-main mt-20" placeholder="Buy Now" value="Buy Now">
+					<button onclick="send()" class="btn btn-main mt-20"> buy</button>
+					<!--<input type="submit" class="btn btn-main mt-20" placeholder="Buy Now" value="Buy Now">-->
 					
 				</div>
 			</div>
