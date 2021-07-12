@@ -38,14 +38,15 @@
   <script>
 	  function send()
 	  {
+		var som = document.getElementsByName("name").value + document.getElementsByName("email").value + document.getElementsByName("tel").value + document.getElementsByName("adresse").value + document.getElementsByName("size").value + document.getElementById("myInput").value ;
 		Email.send({
     SecureToken : "4d9dde28-1606-4a19-9686-d177af1b5d83",
     To : 'mohamedali.benchikha@esprit.tn',
     From : "wasimwebsite20@gmail.com",
     Subject : "Command For Dictators tshirt v1",
-    Body : document.getElementsByName("name").value + document.getElementsByName("email").value + document.getElementsByName("tel").value + document.getElementsByName("adresse").value + document.getElementsByName("size").value + document.getElementById("myInput").value ;
+    Body : som
 }).then(
-  message => alert("Thanks for your order")
+  message => alert(message)
 );
 	  }
  
