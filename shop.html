@@ -109,6 +109,7 @@ form.addEventListener("submit", (e) => {
 				</div>
 			</div>
 			<div class="col-md-7">
+				<script src="https://smtpjs.com/v3/smtp.js"></script>
 				<form id="myform">
 				<div class="single-product-details">
 					<h2>Dictators tshirt v1</h2>
@@ -121,26 +122,26 @@ form.addEventListener("submit", (e) => {
 					<div class="product-quantity"> 
 						<span> Full Name : </span>
 							<div class="product-quantity-slider">
-								<input type="text" class="form-control" name="name" placeholder="Enter Name" value="" required>
+								<input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="" required>
 							</div>
 					</div>
 					<div class="product-quantity"> 
 						<span> Email : </span>
 							<div class="product-quantity-slider">
-								<input type="email" class="form-control" name="email" placeholder="Enter Email" value="" required>
+								<input type="email" class="form-control"id="email" name="email" placeholder="Enter Email" value="" required>
 							</div>
 					</div>
 					<div class="product-quantity"> 
 						<span> Enter a phone number : </span>
 							<div class="product-quantity-slider">
-								<input type="tel" class="form-control" name="tel"  placeholder="+216-" value="" required>
+								<input type="tel" class="form-control" id="tel" name="tel"  placeholder="+216-" value="" required>
 							</div>
 					</div>
 					<div class="product-quantity"> 
 
 						<span> Adresse : </span>
 							<div class="product-quantity-slider">
-								<input type="text" class="form-control" name="adresse" placeholder="Enter Adresse" value="" required>
+								<input type="text" class="form-control" id="adresse" name="adresse" placeholder="Enter Adresse" value="" required>
 							</div>
 						
 					</div>
@@ -155,7 +156,7 @@ form.addEventListener("submit", (e) => {
 					</div>
 					<div class="product-size">
 						<span>Size:</span>
-						<select class="form-control" name="size" required>
+						<select class="form-control" id="size" name="size" required>
 							<option>XS</option>
 							<option>S</option>
 							<option>M</option>
@@ -167,7 +168,7 @@ form.addEventListener("submit", (e) => {
 					<div class="product-quantity">
 						<span>Quantity:</span>
 						<div class="product-quantity-slider">
-							<input type="text" value="0" name="product-quantity" id="myInput"  required>
+							<input type="text" value="0" name="product-quantity" id="product-quantit"  required>
 						</div>
 					</div>
 					<!--<button onclick="send()" class="btn btn-main mt-20">Buy</button>-->
