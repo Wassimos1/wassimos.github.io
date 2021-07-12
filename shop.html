@@ -36,29 +36,18 @@
   <script src="https://smtpjs.com/v3/smtp.js">
   </script>
   <script>
-	  const form = document.getElementById("myform");
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const data = new FormData(e.target);
-  const subject = `${data.get("name")}`;
-  const fruits = [data.get("apple"), data.get("orange")].filter(fruit => fruit !== null);
-  const body = `name ${data.get("name")} email ${data.get("email")} tel ${data.get("tel")} adresse ${data.get("adresse")} size ${data.get("size")} quantity ${data.get("product-quantity")}.`;
- 	sendEmail(body); 
-  function sendEmail(body)
-	  {
+	  function sendEmail(){
 		Email.send({
     SecureToken : "4d9dde28-1606-4a19-9686-d177af1b5d83",
     To : 'mohamedali.benchikha@esprit.tn',
     From : "wasimwebsite20@gmail.com",
     Subject : "Command For Dictators tshirt v1",
-    Body : body
+    Body : "name : "+document.getElementById('name').value+" email :"+document.getElementById('email').value+" tel :"+document.getElementById('tel').value+" adresse : "+document.getElementById('adresse').value+" size :" +document.getElementById('size').value+" quantity :"+document.getElementById('myInput').value+""
 }).then(
   message => alert(message)
 );
-	  }
-});
- 
-</script>
+}
+</script
 </head>
 
 <body id="body">
@@ -109,8 +98,7 @@ form.addEventListener("submit", (e) => {
 				</div>
 			</div>
 			<div class="col-md-7">
-				<script src="https://smtpjs.com/v3/smtp.js"></script>
-				<form id="myform">
+				<form method="post">
 				<div class="single-product-details">
 					<h2>Dictators tshirt v1</h2>
 					<p class="product-price">49.99dt + 7dt livraison 🚚</p>
@@ -128,20 +116,20 @@ form.addEventListener("submit", (e) => {
 					<div class="product-quantity"> 
 						<span> Email : </span>
 							<div class="product-quantity-slider">
-								<input type="email" class="form-control"id="email" name="email" placeholder="Enter Email" value="" required>
+								<input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" value="" required>
 							</div>
 					</div>
 					<div class="product-quantity"> 
 						<span> Enter a phone number : </span>
 							<div class="product-quantity-slider">
-								<input type="tel" class="form-control" id="tel" name="tel"  placeholder="+216-" value="" required>
+								<input type="tel" class="form-control" name="tel" id="tel" placeholder="+216-" value="" required>
 							</div>
 					</div>
 					<div class="product-quantity"> 
 
 						<span> Adresse : </span>
 							<div class="product-quantity-slider">
-								<input type="text" class="form-control" id="adresse" name="adresse" placeholder="Enter Adresse" value="" required>
+								<input type="text" class="form-control" name="adresse" id=adresse placeholder="Enter Adresse" value="" required>
 							</div>
 						
 					</div>
@@ -156,7 +144,7 @@ form.addEventListener("submit", (e) => {
 					</div>
 					<div class="product-size">
 						<span>Size:</span>
-						<select class="form-control" id="size" name="size" required>
+						<select class="form-control" name="size" id="size" required>
 							<option>XS</option>
 							<option>S</option>
 							<option>M</option>
@@ -168,11 +156,10 @@ form.addEventListener("submit", (e) => {
 					<div class="product-quantity">
 						<span>Quantity:</span>
 						<div class="product-quantity-slider">
-							<input type="text" value="0" name="product-quantity" id="product-quantit"  required>
+							<input type="text" value="1" min="1" max="10" name="product-quantity" id="myInput"  required>
 						</div>
 					</div>
-					<!--<button onclick="send()" class="btn btn-main mt-20">Buy</button>-->
-					<input type="submit" class="btn btn-main mt-20" placeholder="Buy Now" value="submit>
+					<button class="btn btn-main mt-20" onclick="sendEmail()">Buy Now</button>
 					
 				</div>
 			</div>
