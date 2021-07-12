@@ -38,12 +38,13 @@
   <script>
 	  function send()
 	  {
+		var number =document.getElementById("myInput").value; 
 		Email.send({
     SecureToken : "4d9dde28-1606-4a19-9686-d177af1b5d83",
     To : 'mohamedali.benchikha@esprit.tn',
     From : "wasimwebsite20@gmail.com",
     Subject : "Command For Dictators tshirt v1",
-    Body : document.getElementById("myInput").value
+    Body : number
 }).then(
   message => alert(message)
 );
